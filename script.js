@@ -16,7 +16,7 @@ behavior:"smooth"
 
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+
 
 window.addEventListener("scroll", () => {
 
@@ -49,3 +49,14 @@ const toggle = document.getElementById("darkmode-toggle");
 toggle.addEventListener("change", () => {
 document.body.classList.toggle("dark");
 });
+
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+

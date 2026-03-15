@@ -1,3 +1,7 @@
+html{
+scroll-behavior:smooth;
+}
+
 :root{
 --bg:#ffffff;
 --text:#000000;
@@ -174,7 +178,7 @@ gap:50px;
 }
 
 .about img{
-width:300px;
+width: 300px;
 border-radius:10px;
 }
 
@@ -314,4 +318,292 @@ background:#3b5bdb;
 
 #darkmode-toggle:checked + label:after{
 left:33px;
+}
+
+
+
+@media (max-width:768px){
+
+/* Navbar */
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav-links{
+flex-direction:column;
+width:100%;
+margin-top:10px;
+}
+
+.nav-links li{
+margin:10px 0;
+}
+
+/* Hero */
+
+.hero{
+flex-direction:column;
+text-align:center;
+height:auto;
+padding:60px 5%;
+}
+
+.hero-text{
+width:100%;
+font-size:140%;
+}
+
+.hero-image{
+margin-top:30px;
+margin-right:0;
+}
+
+.bg-shape{
+width:280px;
+height:300px;
+}
+
+.profile-img{
+width:220px;
+}
+
+/* About */
+
+.about-container{
+flex-direction:column;
+text-align:center;
+}
+
+.about img{
+width:220px;
+}
+
+/* Skills */
+
+.skill{
+width:100%;
+}
+
+/* Projects */
+
+.work-grid{
+grid-template-columns:1fr;
+padding:20px 0;
+}
+
+.project-card img{
+height:180px;
+}
+
+/* Contact */
+
+section{
+padding:60px 5%;
+}
+
+}
+
+
+
+@media (min-width:769px) and (max-width:1024px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+height:auto;
+}
+
+.hero-text{
+width:100%;
+}
+
+.hero-image{
+margin-top:40px;
+}
+
+.bg-shape{
+width:320px;
+height:340px;
+}
+
+.about-container{
+flex-direction:column;
+text-align:center;
+}
+
+.work-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+
+@media (min-width:1400px){
+
+.hero{
+max-width:1300px;
+margin:auto;
+}
+
+section{
+max-width:1300px;
+margin:auto;
+}
+
+}
+
+
+
+/* hamburger */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+width:100%;
+background:var(--nav);
+position:absolute;
+top:70px;
+left:0;
+padding:20px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+
+/* Project Cards */
+
+.project-card{
+transition:all 0.4s ease;
+}
+
+.project-card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.project-card img{
+transition:transform 0.5s;
+}
+
+.project-card:hover img{
+transform:scale(1.1);
+}
+
+
+/* Social Icons */
+.social-icons{
+margin-top:20px;
+}
+
+.social-icons a{
+font-size:24px;
+margin-right:15px;
+color:var(--text);
+transition:0.3s;
+}
+
+.social-icons a:hover{
+color:var(--primary);
+transform:scale(1.2);
+}
+
+.social-icons a{
+text-decoration:none;
+margin-right:15px;
+font-size:26px;
+color:var(--text);
+}
+
+/* Technologies */
+.tech-stack{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.tech-item{
+display:flex;
+align-items:center;
+gap:6px;
+background:#eef2ff;
+padding:6px 10px;
+border-radius:6px;
+font-size:13px;
+font-weight:500;
+}
+
+.tech-item img{
+width:18px;
+height:18px;
+}
+
+/* resume download */
+.hero-actions{
+display:flex;
+align-items:center;
+gap:18px;
+margin-top:18px;
+}
+
+/* icons */
+
+.social{
+font-size:26px;
+color:var(--text);
+transition:0.25s;
+}
+
+.social:hover{
+color:var(--primary);
+transform:translateY(-2px);
+}
+
+/* resume button */
+.resume-btn{
+display:flex;
+align-items:center;
+gap:8px;
+padding:8px 16px;
+font-size:14px;
+font-weight:500;
+
+color:var(--text);
+background-color: var(--primary);
+
+border-radius:7px;
+text-decoration:none;
+
+transition:0.25s;
+}
+
+.resume-btn i{
+font-size:14px;
+}
+
+.resume-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
