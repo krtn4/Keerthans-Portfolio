@@ -7,6 +7,7 @@ scroll-behavior:smooth;
 --text:#000000;
 --primary:#3b5bdb;
 --nav:#ffffff;
+--tech:#d2f4f1;
 }
 
 .dark{
@@ -14,6 +15,7 @@ scroll-behavior:smooth;
 --text:#ffffff;
 --nav:#111827;
 --primary:#60a5fa;
+--tech:#d2f4f1;
 }
 
 body{
@@ -212,7 +214,7 @@ padding:40px 10%;
 
 
 .project-card{
-background:white;
+background:var(--nav);
 border-radius:12px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
@@ -290,6 +292,7 @@ display:none;
 .theme-switch label{
 width:60px;
 height:30px;
+left: 20%;
 background:#ccc;
 display:block;
 border-radius:50px;
@@ -302,7 +305,7 @@ transition:0.3s;
 content:"";
 width:24px;
 height:24px;
-background:white;
+background:rgb(142, 142, 142);
 position:absolute;
 top:3px;
 left:3px;
@@ -313,7 +316,7 @@ transition:0.3s;
 /* Toggle ON */
 
 #darkmode-toggle:checked + label{
-background:#3b5bdb;
+background:#1d2a5c;
 }
 
 #darkmode-toggle:checked + label:after{
@@ -548,7 +551,7 @@ flex-wrap:wrap;
 display:flex;
 align-items:center;
 gap:6px;
-background:#eef2ff;
+background:var(--tech);
 padding:6px 10px;
 border-radius:6px;
 font-size:13px;
@@ -558,6 +561,11 @@ font-weight:500;
 .tech-item img{
 width:18px;
 height:18px;
+}
+
+
+.tech-item span{
+color: black;
 }
 
 /* resume download */
